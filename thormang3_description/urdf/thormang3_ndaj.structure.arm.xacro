@@ -594,7 +594,7 @@
    	  <visual>
       	    <origin xyz="0 0 0" rpy="0 0 0"/>
       	    <geometry>
-              <mesh filename="package://thormang3_description/meshes/robotis_r_arm_wr_p_link.stl" scale="0.001 0.001 0.001"/>
+              <mesh filename="package://thormang3_description/meshes/robotis_ndaj_r_arm_wr_p_link.stl" scale="0.001 0.001 0.001"/>
       	    </geometry>
       	    <material name="grey"/>
     	  </visual>
@@ -606,11 +606,22 @@
             <!--<inertia ixx="0.00047" ixy="0.00001" ixz="0.0" iyy="0.00042" iyz="0.0" izz="0.00058" />-->
     	  </inertial>
         </link>
-	
+
+	<!-- right arm ft joint -->
+        <joint name="r_arm_ft" type="fixed">
+          <origin xyz="0.062 -0.045 0.0" rpy="0 0 ${0.0*pi/18.0}"/>
+          <parent link="r_arm_wr_p_link"/>
+          <child link="r_arm_ft_link"/>
+        </joint>
+        <!-- <xacro:insert_transmission name="l_arm_grip" /> -->
+
+	<!-- left arm ft link -->
+        <link name="r_arm_ft_link"></link>
+        
 	<!-- right arm gripper joint -->
         <joint name="r_arm_grip" type="revolute">
           <axis xyz="0 0 1" />		
-          <origin xyz="0.0877 -0.0583 0.0" rpy="0 0 ${-4.0*pi/18.0}"/>
+          <origin xyz="0.1157 -0.0583 0.0" rpy="0 0 ${-4.0*pi/18.0}"/>
           <parent link="r_arm_wr_p_link"/>
           <child link="r_arm_grip_link"/>
           <limit velocity="6.5" effort="1000" lower="0.0" upper="${65.0*pi/180.0}" />
@@ -639,7 +650,7 @@
 	<!-- right arm gripper 1 joint -->
         <joint name="r_arm_grip_1" type="revolute">
           <axis xyz="0 0 -1" />		
-          <origin xyz="0.0877 -0.0317 0.0" rpy="0 0 ${4.0*pi/18.0}"/>
+          <origin xyz="0.1157 -0.0317 0.0" rpy="0 0 ${4.0*pi/18.0}"/>
           <parent link="r_arm_wr_p_link"/>
           <child link="r_arm_grip_1_link"/>
           <limit velocity="6.5" effort="1000" lower="0.0" upper="${65.0*pi/180.0}" />
