@@ -10,7 +10,7 @@
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find thormang3_description)/urdf/materials.xacro" />
 
-  <xacro:include filename="$(find thormang3_description)/urdf/thormang3.structure.arm.xacro" />
+  <xacro:include filename="$(find thormang3_description)/urdf/thormang3_ndaj.structure.arm.xacro" />
   <xacro:include filename="$(find thormang3_description)/urdf/thormang3_ndaj.structure.leg.xacro" />
   <xacro:include filename="$(find thormang3_description)/urdf/thormang3.structure.head.xacro" />
   

@@ -280,7 +280,7 @@
     	  </collision>
 
    	  <visual>
-      	    <origin xyz="0 0 0.018" rpy="0 0 0"/>
+      	    <origin xyz="0 0 0" rpy="0 0 0"/>
       	    <geometry>
               <mesh filename="package://thormang3_description/meshes/robotis_ndaj_l_leg_foot.stl" scale="0.001 0.001 0.001"/>
       	    </geometry>
@@ -305,6 +305,40 @@
 	<!-- left foot ft link -->
         <link name="l_foot_ft_link">
         </link>
+
+        <!-- left foot caster -->
+        <joint name="l_foot_caster" type="continuous">
+          <axis xyz="0 0 1" />		
+          <origin xyz="-0.058 0.12908 0.04297" rpy="${pi*20/180} 0 0"/>
+          <parent link="l_leg_foot_link"/>
+          <child link="l_foot_caster_link"/>
+        </joint>
+        
+        <link name="l_foot_caster_link">
+    	  <!-- <collision> -->
+      	  <!--   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/> -->
+      	  <!--   <geometry> -->
+          <!--     <box size="0.22 0.15 0.015" /> -->
+      	  <!--   </geometry> -->
+    	  <!-- </collision> -->
+
+   	  <visual>
+      	    <origin xyz="0 0 0" rpy="0 0 0"/>
+      	    <geometry>
+              <mesh filename="package://thormang3_description/meshes/robotis_ndaj_caster.stl" scale="0.001 0.001 0.001"/>
+      	    </geometry>
+      	    <material name="grey"/>
+    	  </visual>
+
+          <inertial>
+      	    <origin xyz="0.000 0.009 -0.013" rpy="0 0 0"/>
+      	    <mass value="1.689"/>
+      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" /> 
+            <!-- <inertia ixx="0.00219" ixy="0.0" ixz="0.0" iyy="0.00433" iyz="0.00011" izz="0.00609" /> -->
+    	  </inertial>
+        </link>
+
+
 
     </xacro:macro>
 
@@ -607,6 +641,38 @@
 
 	<!-- right foot ft link -->
         <link name="r_foot_ft_link">
+        </link>
+
+        <!-- right foot caster -->
+        <joint name="r_foot_caster" type="continuous">
+          <axis xyz="0 0 1" />		
+          <origin xyz="-0.058 -0.12908 0.04297" rpy="${-pi*20/180} 0 0"/>
+          <parent link="r_leg_foot_link"/>
+          <child link="r_foot_caster_link"/>
+        </joint>
+        
+        <link name="r_foot_caster_link">
+    	  <!-- <collision> -->
+      	  <!--   <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/> -->
+      	  <!--   <geometry> -->
+          <!--     <cylinder length="0.6" radius="0.2"/> -->
+      	  <!--   </geometry> -->
+    	  <!-- </collision> -->
+
+   	  <visual>
+      	    <origin xyz="0 0 0" rpy="0 0 0"/>
+      	    <geometry>
+              <mesh filename="package://thormang3_description/meshes/robotis_ndaj_caster.stl" scale="0.001 0.001 0.001"/>
+      	    </geometry>
+      	    <material name="grey"/>
+    	  </visual>
+
+          <inertial>
+      	    <origin xyz="0.000 0.009 -0.013" rpy="0 0 0"/>
+      	    <mass value="1.689"/>
+      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" /> 
+            <!-- <inertia ixx="0.00219" ixy="0.0" ixz="0.0" iyy="0.00433" iyz="0.00011" izz="0.00609" /> -->
+    	  </inertial>
         </link>
 
     </xacro:macro>
