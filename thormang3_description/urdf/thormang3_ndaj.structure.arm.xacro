@@ -251,11 +251,12 @@
     	  </visual>
 
           <inertial>
-      	    <origin xyz="0.065 0.045 0.000" rpy="0 0 0"/>
-      	    <mass value="0.565"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" /> 
-            <!--<inertia ixx="0.00047" ixy="-0.00001" ixz="0.0" iyy="0.00042" iyz="0.0" izz="0.00058" />-->
-    	  </inertial>
+            <origin xyz="0.065052 0.044289 0.003926" rpy="0 0 0"/>
+            <mass value="0.512666"/>
+            <inertia ixx="0.000538946413" ixy="-0.000014055574" ixz="0.000021583094"
+                       iyy="0.000665940191" iyz="-0.00000081351" izz="0.000717403256" />
+          </inertial>
+
         </link>
 
 	<!-- left arm ft joint -->
@@ -600,11 +601,11 @@
     	  </visual>
 
           <inertial>
-      	    <origin xyz="0.065 -0.045 0.000" rpy="0 0 0"/>
-      	    <mass value="0.565"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-            <!--<inertia ixx="0.00047" ixy="0.00001" ixz="0.0" iyy="0.00042" iyz="0.0" izz="0.00058" />-->
-    	  </inertial>
+            <origin xyz="0.065052 -0.044289 -0.003926" rpy="0 0 0"/>
+            <mass value="0.512666"/>
+            <inertia ixx="0.0005389464" ixy="1.4055574E-05" ixz="-2.1583094E-05"
+                     iyy="0.0006659402" iyz="-8.1351E-07" izz="0.0007174033" />
+          </inertial>
         </link>
 
 	<!-- right arm ft joint -->

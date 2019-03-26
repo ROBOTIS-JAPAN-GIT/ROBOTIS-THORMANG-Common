@@ -138,17 +138,19 @@
       	    <!-- <origin xyz="0 0 0" rpy="0 ${pi*0.0333} 0"/> -->
             <origin xyz="0 0 0" rpy="0 0 0"/>
       	    <geometry>
-              <mesh filename="package://thormang3_description/meshes/robotis_ndaj_l_leg_kn_p_link.stl" scale="0.001 0.001 0.001"/>
+              <mesh filename="package://thormang3_description/meshes/robotis_ndaj_l_leg_kn_p_link.stl"
+                    scale="0.001 0.001 0.001"/>
       	    </geometry>
       	    <material name="grey"/>
     	  </visual>
 
           <inertial>
-      	    <origin xyz="-0.002 -0.066 -0.183" rpy="0 0 0"/>
-      	    <mass value="2.401"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-            <!-- <inertia ixx="0.01971" ixy="0.00031" ixz="-0.00294" iyy="0.01687" iyz="0.00140" izz="0.00574" /> -->
-    	  </inertial>
+            <origin xyz="0.041338 -0.060892 -0.123198" rpy="0 0 0"/>
+            <mass value="3.118017"/>
+            <inertia ixx="0.03231569999" ixy="-0.001487889471" ixz="0.010162822649"
+                     iyy="0.033985508107" iyz="-0.002709829887" izz="0.012315588096"/>
+          </inertial>
+
         </link>
 
         <!-- left wheel pitch joint -->
@@ -181,14 +183,13 @@
           </visual>
 
           <inertial>
-            <origin xyz="-0.011 -0.033 0.000" rpy="0 0 0"/>
-            <mass value="1.045"/>
-            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-            <!-- <inertia ixx="0.00056" ixy="0.0" ixz="0.0" iyy="0.00168" iyz="0.0" izz="0.00171" /> --> 
+            <origin xyz="0 0.012946 0" rpy="0 0 0"/>
+            <mass value="0.292968"/>
+            <inertia ixx="0.000289349312" ixy="0.000000000121" ixz="0.000000000007"
+                     iyy="0.000538954772" iyz="0.000000000045" izz="0.00028934924"/>
           </inertial>
+
         </link>
-
-
 
 	<!-- left ankle pitch joint -->
         <joint name="l_leg_an_p" type="revolute">
@@ -288,11 +289,12 @@
     	  </visual>
 
           <inertial>
-      	    <origin xyz="0.000 0.009 -0.013" rpy="0 0 0"/>
-      	    <mass value="1.689"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" /> 
-            <!-- <inertia ixx="0.00219" ixy="0.0" ixz="0.0" iyy="0.00433" iyz="0.00011" izz="0.00609" /> -->
-    	  </inertial>
+            <origin xyz="-0.006176 0.019056 -0.024972" rpy="0 0 0"/>
+            <mass value="1.421636"/>
+            <inertia ixx="0.003340068826" ixy="0.000693304354" ixz="0.000374296277"
+                     iyy="0.004263155273" iyz="-0.000581418942" izz="0.006463087069"/>
+          </inertial>
+
         </link>
 
 	<!-- left ft fixed joint -->
@@ -331,11 +333,12 @@
     	  </visual>
 
           <inertial>
-      	    <origin xyz="0.000 0.009 -0.013" rpy="0 0 0"/>
-      	    <mass value="1.689"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" /> 
-            <!-- <inertia ixx="0.00219" ixy="0.0" ixz="0.0" iyy="0.00433" iyz="0.00011" izz="0.00609" /> -->
-    	  </inertial>
+            <origin xyz="0.016498 0.000023 -0.029221" rpy="0 0 0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.000035291" ixy="-0.000000001" ixz="0.000000767"
+                     iyy="0.000039611" iyz="0.000000007" izz="0.00003784"/>
+          </inertial>
+
         </link>
 
         <joint name="l_foot_caster_wh" type="continuous">
@@ -497,11 +500,11 @@
     	  </visual>
 
           <inertial>
-      	    <origin xyz="-0.002 -0.066 -0.183" rpy="0 0 0"/>
-      	    <mass value="2.401"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-            <!-- <inertia ixx="0.01971" ixy="0.00031" ixz="-0.00294" iyy="0.01687" iyz="0.00140" izz="0.00574" /> -->
-    	  </inertial>
+            <origin xyz="0.040952 0.06077 -0.123951" rpy="0 0 0"/>
+              <mass value="3.086433"/>
+              <inertia ixx="0.0320834396" ixy="0.001501346" ixz="-0.0100736001"
+                       iyy="0.0337457987" iyz="0.0027356746" izz="0.0122102233" />
+          </inertial>
         </link>
 
         <!-- right wheel pitch joint -->
@@ -534,14 +537,15 @@
           </visual>
 
           <inertial>
-            <origin xyz="-0.011 -0.033 0.000" rpy="0 0 0"/>
-            <mass value="1.045"/>
-            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-            <!-- <inertia ixx="0.00056" ixy="0.0" ixz="0.0" iyy="0.00168" iyz="0.0" izz="0.00171" /> --> 
+            <origin xyz="0 -0.012946 0" rpy="0 0 0"/>
+            <mass value="0.292968"/>
+            <inertia ixx="0.0002893493" ixy="-1.21E-10" ixz="-2E-12"
+                     iyy="-0.0005389548" iyz="4.5E-11" izz="0.0002893492" />
           </inertial>
+
         </link>
 
-	<!-- right ankle pitch joint -->
+        <!-- right ankle pitch joint -->
         <joint name="r_leg_an_p" type="revolute">
           <axis xyz="0 1 0" />		
           <origin xyz="-0.0 0.06 -0.3" rpy="0 0 0"/>
@@ -639,11 +643,12 @@
     	  </visual>
 
           <inertial>
-      	    <origin xyz="0.000 -0.009 -0.013" rpy="0 0 0"/>
-      	    <mass value="1.689"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-            <!-- <inertia ixx="0.00219" ixy="0.0" ixz="0.0" iyy="0.00433" iyz="-0.00011" izz="0.00609" /> -->
-    	  </inertial>
+            <origin xyz="-0.006176 -0.019056 -0.005972" rpy="0 0 0"/>
+            <mass value="1.421636"/>
+            <inertia ixx="0.0033400687" ixy="-0.0006933043" ixz="0.0003742963"
+                     iyy="0.0042631553" iyz="0.0005814189" izz="0.006463087" />
+          </inertial>
+
         </link>
 
 	<!-- right ft fixed joint -->
@@ -682,11 +687,12 @@
     	  </visual>
 
           <inertial>
-      	    <origin xyz="0.000 0.009 -0.013" rpy="0 0 0"/>
-      	    <mass value="1.689"/>
-      	    <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" /> 
-            <!-- <inertia ixx="0.00219" ixy="0.0" ixz="0.0" iyy="0.00433" iyz="0.00011" izz="0.00609" /> -->
-    	  </inertial>
+            <origin xyz="0.016498 0.000023 -0.029221" rpy="0 0 0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.000035291" ixy="-0.000000001" ixz="0.000000767"
+                     iyy="0.000039611" iyz="0.000000007" izz="0.00003784"/>
+          </inertial>
+
         </link>
 
         <joint name="r_foot_caster_wh" type="continuous">
