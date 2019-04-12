@@ -160,7 +160,7 @@
           <limit velocity="10.0" effort="10000"/>
           <dynamics damping="0.1" friction="0.0" />
         </joint>
-        <xacro:insert_transmission name="l_leg_wh_p" />
+        <xacro:insert_wheel_transmission name="l_leg_wh_p" />
 
         <!-- left wheel pitch link -->
         <link name="l_leg_wh_p_link">
@@ -513,7 +513,7 @@
           <limit velocity="10.0" effort="10000"/>
           <dynamics damping="0.1" friction="0.0" />
         </joint>
-        <xacro:insert_transmission name="r_leg_wh_p" />
+        <xacro:insert_wheel_transmission name="r_leg_wh_p" />
 
         <!-- right wheel pitch link -->
         <link name="r_leg_wh_p_link">

@@ -1,9 +1,8 @@
 <?xml version="1.0" ?>
-<launch>    
+<launch>
   <arg name="use_present" default="true" />
-    
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find thormang3_description)/urdf/thormang3.xacro'" />
-    
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find thormang3_description)/urdf/thormang3_ndaj.xacro'" />
+
   <!-- send joint values -->
   <node pkg="joint_state_publisher" type="joint_state_publisher" name="robotis_joint_state_publisher">
     <param name="use_gui" value="FALSE"/>

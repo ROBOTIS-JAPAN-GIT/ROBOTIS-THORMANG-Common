@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <launch>
   <!-- Robot Model -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find thormang3_description)/urdf/thormang3_ndaj.xacro'" />
 
   <!-- Show joint values -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
@@ -10,5 +11,5 @@
   </node>
 
   <!-- Show in Rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find thormang3_description)/rviz/thormang3_display.rviz" output="screen"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find thormang3_description)/rviz/thormang3_ndaj_display.rviz" output="screen"/>
 </launch>
